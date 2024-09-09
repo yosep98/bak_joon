@@ -1,19 +1,13 @@
 import java.util.Arrays;
 class Solution {
     public int solution(int[] d, int budget) {
-        int len=d.length;
-        int cnt = 0;
+        int cnt=0;
         int sum=0;
         Arrays.sort(d);
-        while(cnt<len){
+        while(cnt<d.length){
         sum+=d[cnt];
-        if(sum<budget)
+        if(sum<=budget)
         cnt++;
-        else if(sum==budget)
-        {
-            cnt++;
-            break;
-        }
         else
         break;
         }
